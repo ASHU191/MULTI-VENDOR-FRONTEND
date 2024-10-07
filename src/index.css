@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* shop.jsx ceatageory select btn ka style he  */
+@layer components {
+    .custom-checkbox {
+      @apply relative appearance-none w-5 h-5 bg-gray-200 rounded-full border-2 border-gray-300 cursor-pointer transition-colors duration-300 ease-in-out;
+    }
+  
+    .custom-checkbox:checked::before {
+      content: '';
+      @apply absolute top-1/2 left-1/2 w-2.5 h-2.5 bg-green-500 rounded-full transform -translate-x-1/2 -translate-y-1/2;
+    }
+  }
+
+  /* shop.jsx popular branding css  */
+  @layer components {
+    .popularBrnad:checked::before {
+      content: '✓';
+      display: block;
+      color: white;
+      font-size: 12px;
+      text-align: center;
+      line-height: 1;
+    }
+  }
+
+  body{ background-color: #f0f3f4 }
